@@ -1,7 +1,8 @@
 
 def battery_is_ok(temperature, soc, charge_rate):
-  if check_temprature(temperature) or check_state_of_charge(soc) or check_charge_rate(charge_rate):
-    return False
+  return not check_temprature(temperature)
+  return not check_state_of_charge(soc)
+  return not check_charge_rate(charge_rate)
   return True
 
 def print_text(text):
